@@ -1,0 +1,58 @@
+/* デザインの方向性は「シンプル寄りから始める」(#4 の決定)。作り込みはステップ8(#12)で行う */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  background-color: #eef4f8;
+  color: #333;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  padding: 24px 16px 8px;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.weather-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.city {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.fetched-at {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: #888;
+  margin-left: 8px;
+}
+
+.weather-main {
+  font-size: 2rem;
+  margin: 12px 0;
+}
+
+.weather-main #temperature {
+  margin-left: 12px;
+  font-weight: bold;
+}
+
+.wind {
+  color: #666;
+}

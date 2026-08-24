@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お天気アプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>お天気アプリ</h1>
+  </header>
+
+  <main>
+    <!-- 検索欄はステップ2(#6)で追加する。今は東京固定 -->
+    <section class="weather-card">
+      <p class="city">
+        <span id="city">--</span>
+        <span id="fetched-at" class="fetched-at"></span>
+      </p>
+      <p class="weather-main">
+        <span id="weather-label">--</span>
+        <span id="temperature">--</span>
+      </p>
+      <p class="wind">風速 <span id="wind-speed">--</span> m/s</p>
+    </section>
+    <!-- 週間予報はステップ3(#7)でここに追加する -->
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
