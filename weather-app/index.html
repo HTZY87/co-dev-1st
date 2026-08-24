@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>お天気アプリ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="sky-partly">
   <header>
     <h1>お天気アプリ</h1>
   </header>
@@ -14,14 +17,13 @@
   <main>
     <!-- 検索欄はステップ2(#6)で追加する。今は東京固定 -->
     <section class="weather-card">
-      <p class="city">
-        <span id="city">--</span>
-        <span id="fetched-at" class="fetched-at"></span>
-      </p>
-      <p class="weather-main">
-        <span id="weather-label">--</span>
-        <span id="temperature">--</span>
-      </p>
+      <p class="city" id="city">--</p>
+      <p class="fetched-at" id="fetched-at"></p>
+      <div class="current">
+        <span class="weather-icon" id="weather-icon"></span>
+        <span class="temperature"><span id="temperature">--</span><span class="unit">℃</span></span>
+      </div>
+      <p class="label-row"><span class="weather-label" id="weather-label">--</span></p>
       <p class="wind">風速 <span id="wind-speed">--</span> m/s</p>
     </section>
     <!-- 週間予報はステップ3(#7)でここに追加する -->

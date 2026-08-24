@@ -1,4 +1,9 @@
-import { weatherCodeToLabel, formatFetchedAt } from "./utils.js";
+import {
+  weatherCodeToIcon,
+  weatherCodeToText,
+  skyThemeForCode,
+  formatFetchedAt,
+} from "./utils.js";
 
 // ステップ1の表示側(#5): getWeather() がマージされるまでのダミーデータ。
 // 形は仕様書6章の契約と同じにしてある。つなぎ込みのPRでこの定数を削除し、
@@ -23,10 +28,16 @@ const DUMMY_WEATHER = {
 };
 
 function renderWeather(weather) {
+  const code = weather.current.weatherCode;
+
+  // 空の色を天気に合わせる
+  document.body.className = skyThemeForCode(code);
+
   document.getElementById("city").textContent = weather.city;
   document.getElementById("fetched-at").textContent = formatFetchedAt(weather.fetchedAt);
-  document.getElementById("weather-label").textContent = weatherCodeToLabel(weather.current.weatherCode);
-  document.getElementById("temperature").textContent = `${Math.round(weather.current.temperature)}℃`;
+  document.getElementById("weather-icon").textContent = weatherCodeToIcon(code);
+  document.getElementById("weather-label").textContent = weatherCodeToText(code);
+  document.getElementById("temperature").textContent = Math.round(weather.current.temperature);
   document.getElementById("wind-speed").textContent = weather.current.windSpeed;
   // weather.daily(7日分)はステップ3(#7)で表示する
 }
