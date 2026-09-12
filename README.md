@@ -39,6 +39,18 @@
    ```
 5. GitHub上でPull Requestを作成し、レビュー後にMergeする
 
+## 天気アプリ(開発中)の動かし方
+
+`weather-app/` はESモジュールを使っているため、ファイルを直接開くと動きません。リポジトリ直下でローカルサーバーを起動して開きます。
+
+```
+python3 -m http.server 8000
+```
+
+→ ブラウザで http://localhost:8000/weather-app/ を開く
+
+仕様は `WEATHER_APP_SPEC.md` を参照してください。
+
 ## 参考: サンプルコードの動かし方
 
 練習用のサンプル（`feature/hello-world` ブランチにあります）は、`index.html` をブラウザで開くだけで動作します。特別なインストールは不要です。
